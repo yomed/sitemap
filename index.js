@@ -10,10 +10,12 @@ function setupEntry(entry) {
         }
     });
     (entry.hreflangs || []).forEach(function (hreflang) {
-        var lang = hreflang.lang;
-        var href = hreflang.href;
-        if (lang && href) {
-            xml += '\n<xhtml:link rel="alternate" hreflang="' + lang + '" href="' + href + '" />';
+        if (hreflang) {
+            var lang = hreflang.lang;
+            var href = hreflang.href;
+            if (lang && href) {
+                xml += '\n<xhtml:link rel="alternate" hreflang="' + lang + '" href="' + href + '" />';
+            }
         }
     });
     return xml && '<url>' + xml + '</url>' || '';
