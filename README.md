@@ -3,7 +3,7 @@
 Note: intended to run once per server load, so it's sync
 
 ```sh
-npm i github:yomed/sitemap
+npm i @yomed/sitemap -S
 ```
 
 ## Usage
